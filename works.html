@@ -47,7 +47,7 @@
       display: block;
     }
 
-    /* Grid */
+    /* Grid — default 2 columns for vertical shorts */
     .works-all-grid {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -58,9 +58,17 @@
       justify-items: center;
       align-items: start;
     }
+    .works-all-horizontal {
+      grid-template-columns: 1fr;
+      max-width: 900px;
+    }
     .works-all-grid .work-card {
       display: flex;
       flex-direction: column;
+      width: 100%;
+    }
+    .works-all-horizontal .work-card {
+      width: 100%;
     }
     .works-all-grid .video-container {
       /* width set per video type */
@@ -151,7 +159,7 @@
         <div class="works-section-title reveal">Cinematic &amp; Wide-Format</div>
         <p class="works-section-desc reveal">Traditional 16:9 videography — films, documentaries, and stories told in landscape.</p>
 
-        <div class="works-all-grid">
+        <div class="works-all-grid works-all-horizontal">
 
           <!-- H1 — Workshop Coverage -->
           <div class="work-card reveal">
