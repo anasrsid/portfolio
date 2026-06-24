@@ -452,7 +452,7 @@ ul { list-style: none; }
 /* Ensure both vertical shorts are the same height */
 .work-row-vertical .video-vertical {
   max-height: 500px;
-  width: auto;
+  width: calc(500px * 9 / 16);
 }
 
 .work-row-vertical .work-meta {
@@ -474,8 +474,7 @@ ul { list-style: none; }
 
   .work-row-vertical .video-vertical {
     max-height: 460px;
-    min-width: 240px;
-    width: 260px;
+    width: calc(460px * 9 / 16);
   }
 }
 
@@ -520,13 +519,11 @@ ul { list-style: none; }
 
 /* Vertical Short — 9:16 exact, no black bars */
 .video-vertical {
-  aspect-ratio: 9 / 16;
+  position: relative;
   max-height: 540px;
+  width: calc(540px * 9 / 16);
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
-  min-width: 270px;
-  height: auto;
 }
 
 .video-vertical iframe {

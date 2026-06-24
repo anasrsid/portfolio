@@ -70,12 +70,11 @@
     }
     .works-all-grid .video-vertical {
       max-height: 540px;
-      width: auto;
-      min-width: 0;
+      width: calc(540px * 9 / 16);
     }
     .works-all-grid .video-vertical iframe {
       object-fit: fill !important;
-      width: auto;
+      width: 100%;
     }
     .works-all-grid .video-horizontal {
       width: 100%;
@@ -120,7 +119,7 @@
     }
     @media (max-width: 560px) {
       .works-all-grid { grid-template-columns: 1fr; }
-      .works-all-grid .video-vertical { max-height: 480px; }
+      .works-all-grid .video-vertical { max-height: 480px; width: calc(480px * 9 / 16); }
     }
   </style>
 </head>
