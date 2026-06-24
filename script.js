@@ -124,53 +124,6 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ============================================
-// STAT COUNTER ANIMATION (on visible)
-// ============================================
-const statNumbers = document.querySelectorAll('.stat-number');
-
-const statObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const stat = entry.target;
-      const targetText = stat.textContent;
-      const num = parseInt(targetText);
-      
-      if (!isNaN(num) && !stat.dataset.animated) {
-        stat.dataset.animated = 'true';
-        animateCounter(stat, 0, num, 1500);
-      }
-    }
-    // Remove animated flag so it can replay on scroll back up and down again
-    if (!entry.isIntersecting) {
-      entry.target.dataset.animated = '';
-    }
-  });
-}, { threshold: 0.8 });
-
-statNumbers.forEach(stat => statObserver.observe(stat));
-
-function animateCounter(el, start, end, duration) {
-  const startTime = performance.now();
-  
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    
-    // Ease out quad
-    const eased = 1 - (1 - progress) * (1 - progress);
-    const current = Math.round(start + (end - start) * eased);
-    
-    el.textContent = current + (el.dataset.suffix || '+');
-    
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    }
-  }
-  
-  requestAnimationFrame(update);
-}
-
-// ============================================
 // MOBILE NAV TOGGLE
 // ============================================
 const navToggle = document.getElementById('navToggle');
