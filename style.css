@@ -438,7 +438,9 @@ ul { list-style: none; }
 .work-row-vertical {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 32px;
+  flex-wrap: wrap;
 }
 
 .work-row-vertical .work-card {
@@ -450,8 +452,7 @@ ul { list-style: none; }
 /* Ensure both vertical shorts are the same height */
 .work-row-vertical .video-vertical {
   max-height: 500px;
-  min-width: 250px;
-  width: 270px;
+  width: auto;
 }
 
 .work-row-vertical .work-meta {
