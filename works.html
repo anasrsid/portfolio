@@ -69,12 +69,14 @@
       max-width: 100%;
     }
     .works-all-grid .video-vertical {
-      max-height: 540px;
+      height: 540px;
       width: calc(540px * 9 / 16);
+      flex-shrink: 0;
     }
     .works-all-grid .video-vertical iframe {
-      object-fit: fill !important;
+      object-fit: fill;
       width: 100%;
+      height: 100%;
     }
     .works-all-grid .video-horizontal {
       width: 100%;
@@ -119,7 +121,7 @@
     }
     @media (max-width: 560px) {
       .works-all-grid { grid-template-columns: 1fr; }
-      .works-all-grid .video-vertical { max-height: 480px; width: calc(480px * 9 / 16); }
+      .works-all-grid .video-vertical { height: 480px; width: calc(480px * 9 / 16); }
     }
   </style>
 </head>
