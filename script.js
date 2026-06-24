@@ -107,13 +107,6 @@ window.addEventListener('scroll', () => {
         const yOffset = scrollY * speed * 0.5;
         shape.style.transform = `translate3d(0, ${yOffset}px, 0)`;
       });
-      
-      // Hero image — fade out on scroll down, fade in on scroll up
-      const heroProgress = Math.min(scrollY / (heroRect.height * 0.6), 1);
-      const opacity = 1 - (heroProgress * 0.85);
-      const scale = 1 + (heroProgress * 0.03);
-      heroImageWrapper.style.opacity = opacity;
-      heroImageWrapper.style.transform = `translate3d(0, ${scrollY * 0.08}px, 0) scale(${scale})`;
     }
   }
   
