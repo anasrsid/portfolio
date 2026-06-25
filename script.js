@@ -160,28 +160,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// CONTACT FORM
-// ============================================
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = contactForm.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = 'Sent ✓';
-    btn.style.background = '#3fb950';
-    btn.style.borderColor = '#3fb950';
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      contactForm.reset();
-    }, 3000);
-  });
-}
-
-// ============================================
 // CURSOR TRAIL (desktop only)
 // ============================================
 if (window.innerWidth > 1024 && !('ontouchstart' in window)) {
