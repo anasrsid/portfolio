@@ -536,7 +536,7 @@ ul { list-style: none; }
 }
 
 .work-meta {
-  padding: 0 4px;
+  padding: 20px 8px 8px;
 }
 
 .work-number {
@@ -1270,4 +1270,48 @@ ul { list-style: none; }
 
 .stat:hover .stat-number {
   transform: scale(1.05);
+}
+
+/* ============================================
+   DESKTOP-ONLY FIXES (laptop and above)
+   Does NOT affect mobile view
+   ============================================ */
+@media (min-width: 901px) {
+
+  /* 1. About section paragraph fully centered */
+  .section-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 2. Vertical shorts 03 & 04 — force same row, no wrapping */
+  .work-row-vertical {
+    flex-wrap: nowrap;
+  }
+  .work-row-vertical .work-card {
+    flex: 0 0 281px;
+    background: var(--color-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  /* 3. Portfolio horizontal videos — ensure full width rendering */
+  .work-row-horizontal .work-card {
+    width: 100%;
+    background: var(--color-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  /* 4. Get in Touch — content properly positioned */
+  .contact-header {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
 }
