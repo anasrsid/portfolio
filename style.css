@@ -738,6 +738,8 @@ ul { list-style: none; }
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
+
 /* ============================================
    CHANNELS
    ============================================ */
@@ -747,7 +749,6 @@ ul { list-style: none; }
 
 .channels-header {
   max-width: var(--max-width);
-  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
@@ -760,7 +761,6 @@ ul { list-style: none; }
 
 .channels-grid {
   max-width: var(--max-width);
-  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
@@ -823,7 +823,6 @@ ul { list-style: none; }
 
 .contact-centered {
   max-width: 500px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
@@ -948,7 +947,6 @@ ul { list-style: none; }
 
 .footer-container {
   max-width: var(--max-width);
-  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
@@ -1350,7 +1348,6 @@ ul { list-style: none; }
   /* 4. Get in Touch — content properly positioned */
   .contact-header {
     max-width: var(--max-width);
-    width: 100%;
     margin: 0 auto;
     padding: 0 24px;
     text-align: center;
