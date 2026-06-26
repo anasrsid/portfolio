@@ -483,6 +483,22 @@ ul { list-style: none; }
   justify-content: flex-start;
 }
 
+/* Works page: 3 shorts per row on desktop */
+.work-row-3 .work-card {
+  flex: 0 0 281px;
+  max-width: 281px;
+}
+
+@media (min-width: 1200px) {
+  .work-row-3 {
+    flex-wrap: nowrap;
+  }
+  .work-row-3 .work-card {
+    flex: 0 0 281px;
+    max-width: 281px;
+  }
+}
+
 @media (max-width: 900px) {
   .work-row-horizontal {
     grid-template-columns: 1fr;
